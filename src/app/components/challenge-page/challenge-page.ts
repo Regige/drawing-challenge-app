@@ -9,4 +9,17 @@ import { Component } from '@angular/core';
 })
 export class ChallengePage {
 
+
+  toggleMotiveCard() {
+  
+  }
+  toggleTechnicCard() {
+  }
+
+  toggleTimeCard() {
+
+  }
+  toggleMaterialCard() {
+
+  }
 }
