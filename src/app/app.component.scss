@@ -1,0 +1,41 @@
+/* App Component Styles */
+
+nav {
+  background-color: #333;
+  padding: 1rem 0;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #ddd;
+}
+
+/* Add some spacing below the nav before the router outlet content */
+:host {
+  display: block;
+}
+
+// The router-outlet itself doesn't take styles this way,
+// but we can ensure the content *within* the outlet has some margin.
+// Global styles in styles.scss will handle padding for individual pages.
+// For a more direct approach, wrap <router-outlet> in a div in app.component.html and style that div.
+// However, the current subtask is to style the nav, and global styles should provide adequate spacing.
