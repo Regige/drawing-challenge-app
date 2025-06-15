@@ -1,0 +1,26 @@
+<div>
+  <button (click)="toggleMotiveCard()">Motive</button>
+  <button (click)="toggleTechnicCard()">Technic</button>
+  <button (click)="toggleTimeCard()">Time</button>
+  <button (click)="toggleMaterialCard()">Material</button>
+</div>
+
+<div *ngIf="showMotiveCard" class="card">
+  <h2>Motive</h2>
+  <img src="https://via.placeholder.com/300x200?text=Motive" alt="Motive Placeholder">
+</div>
+
+<div *ngIf="showTechnicCard" class="card">
+  <h2>Technic</h2>
+  <p>Technic details here</p>
+</div>
+
+<div *ngIf="showTimeCard" class="card">
+  <h2>Time</h2>
+  <p>Time limit here</p>
+</div>
+
+<div *ngIf="showMaterialCard" class="card">
+  <h2>Material</h2>
+  <p>Material details here</p>
+</div>

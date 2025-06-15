@@ -1,0 +1,27 @@
+/* Imprint Page Styles */
+
+:host {
+  display: block;
+}
+
+div { // Assuming content is in a div
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+h1 {
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
