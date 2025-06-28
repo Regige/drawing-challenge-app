@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Shared } from './shared';
+import { FooterComponent } from './footer.component';
 
-describe('Shared', () => {
-  let component: Shared;
-  let fixture: ComponentFixture<Shared>;
+describe('FooterComponent', () => {
+  let component: FooterComponent;
+  let fixture: ComponentFixture<FooterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Shared]
+      imports: [FooterComponent]
     })
     .compileComponents();
-
-    fixture = TestBed.createComponent(Shared);
+    
+    fixture = TestBed.createComponent(FooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
