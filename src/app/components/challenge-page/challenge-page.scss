@@ -1,7 +1,29 @@
 /* Challenge Page Styles */
 
 :host {
-  display: block; // Ensures the component takes up block-level space for padding/margin.
+  display: block; /* Ensures the component takes up block-level space for padding/margin. */
+}
+
+.page-controls {
+  margin-bottom: 20px;
+  text-align: left; /* Align back button to the left */
+}
+
+/* Style for the "Back to Home" button, distinct from challenge category buttons */
+.page-controls button {
+  background-color: #6c757d; /* A neutral gray */
+  color: white;
+  border: none;
+  padding: 10px 15px; /* Slightly smaller padding than category buttons */
+  margin: 5px 0; /* Margin only top/bottom, aligned left */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: background-color 0.3s ease;
+}
+
+.page-controls button:hover {
+  background-color: #5a6268; /* Darker gray on hover */
 }
 
 .button-container {
