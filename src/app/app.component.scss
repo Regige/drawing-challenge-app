@@ -1,9 +1,25 @@
-/* App Component Styles */
+/* Global App Component Styles */
+
+header {
+  background-color: #4a4a4a; /* Darker grey for header */
+  color: white;
+  padding: 1.5rem 0; /* Increased padding */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem; /* Adjusted font size */
+  font-weight: 500; /* Slightly less bold */
+  letter-spacing: 1px; /* Added letter spacing */
+}
 
 nav {
-  background-color: #333;
+  background-color: #333; /* Standard dark nav */
   padding: 1rem 0;
   color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08); /* Subtle shadow for nav */
 }
 
 nav ul {
@@ -22,20 +38,61 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 1.1em;
+  padding: 0.5rem 0.75rem; /* Added padding for better click targets */
+  border-radius: 4px; /* Added border radius */
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
-  color: #ddd;
+nav ul li a:hover,
+nav ul li a.active { /* Assuming 'active' class for active router links */
+  background-color: #555; /* Darker background on hover/active */
+  color: #fff; /* Ensure text remains white */
+  text-decoration: none; /* Remove underline from hover if any global style adds it */
 }
 
-/* Add some spacing below the nav before the router outlet content */
+main {
+  padding: 20px; /* Add some padding around the router outlet content */
+  /* This ensures content isn't flush against header/nav or footer */
+  flex-grow: 1; /* Allow main content to grow and push footer down */
+}
+
+/* Ensure host takes up full width for background colors to apply edge-to-edge */
 :host {
-  display: block;
+  display: flex; /* Use flexbox to push footer down */
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh; /* Ensure it takes at least full viewport height */
 }
 
-// The router-outlet itself doesn't take styles this way,
-// but we can ensure the content *within* the outlet has some margin.
-// Global styles in styles.scss will handle padding for individual pages.
-// For a more direct approach, wrap <router-outlet> in a div in app.component.html and style that div.
-// However, the current subtask is to style the nav, and global styles should provide adequate spacing.
+footer {
+  background-color: #f8f9fa; /* A light background color */
+  color: #333;
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid #e7e7e7;
+  margin-top: auto; /* Push footer to the bottom with flexbox */
+}
+
+footer p {
+  margin-bottom: 1rem;
+  font-size: 0.9em;
+  color: #6c757d; /* Muted text color for copyright */
+}
+
+footer nav.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Increased gap */
+}
+
+footer nav.footer-nav ul li a {
+  text-decoration: none;
+  color: #007bff; /* Standard link color */
+}
+
+footer nav.footer-nav ul li a:hover {
+  text-decoration: underline;
+  color: #0056b3; /* Darker link color on hover */
+}
