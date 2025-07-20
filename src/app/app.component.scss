@@ -31,11 +31,5 @@ nav ul li a:hover {
 
 /* Add some spacing below the nav before the router outlet content */
 :host {
-  display: block;
-}
 
-// The router-outlet itself doesn't take styles this way,
-// but we can ensure the content *within* the outlet has some margin.
-// Global styles in styles.scss will handle padding for individual pages.
-// For a more direct approach, wrap <router-outlet> in a div in app.component.html and style that div.
-// However, the current subtask is to style the nav, and global styles should provide adequate spacing.
+}
